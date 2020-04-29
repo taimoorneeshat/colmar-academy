@@ -1,14 +1,37 @@
+/* global */
+
 body {
     margin: 0;
+    font-family: Ubuntu, sans-serif;
+}
+
+/* utilities */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .too-extra {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .extra {
+        display: none;
+    }
 }
 
 /* header */
 
 header {
-    height: 4em;
+    height: 3.5em;
     border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
+    padding: 0 1.5em;
 }
 
 header nav {
@@ -16,31 +39,35 @@ header nav {
     text-align: right;
 }
 
-nav a {
+.nav-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.nav-title strong {
+    font-weight: 500;
+}
+
+.nav-link {
     text-decoration: none;
     color: black;
-    margin: 0 0.5em;
+    margin-left: 1em;
 }
 
-/* footer */
-
-footer {
-    border-top: 1px solid black;
-    padding: 1em 1.5em;
+.nav-link img {
+    display: none;
+    vertical-align: middle;
 }
 
-footer ul {
-    display: inline;
-}
+@media only screen and (max-width: 480px) {
+    .nav-link img {
+        display: inline-block;
+    }
 
-footer li {
-    display: inline;
-    padding-left: 1em;
-}
-
-footer a {
-    text-decoration: none;
-    color: black;
+    .nav-link span {
+        display: none;
+    }
 }
 
 /* banner */
@@ -103,12 +130,6 @@ footer a {
     margin-bottom: 1em;
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .career-path {
     background-color: white;
     width: 360px;
@@ -164,4 +185,26 @@ footer a {
     width: 35%;
     height: auto;
     margin: 0 1em;
+}
+
+
+/* footer */
+
+footer {
+    border-top: 1px solid black;
+    padding: 1em 1.5em;
+}
+
+footer ul {
+    display: inline;
+}
+
+footer li {
+    display: inline;
+    padding-left: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
 }
