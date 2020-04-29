@@ -5,7 +5,15 @@ body {
     font-family: Ubuntu, sans-serif;
 }
 
+h1 {
+    margin: 0;
+}
+
 /* utilities */
+
+.smoke {
+    background-color: whitesmoke;
+}
 
 .flex-container {
     display: flex;
@@ -73,15 +81,50 @@ header nav {
 /* banner */
 
 #banner {
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    padding: 1.5em 2em;
 }
 
 #banner img {
     width: 60%;
     height: auto;
-    margin: 2em 1.5em;
+}
+
+#banner-content {
+    flex-grow: 1;
+    color: #555;
+    padding: 1.5em;
+}
+
+#banner h1 {
+    font-size: 3.5em;
+}
+
+#banner p {
+    color: #666;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#banner button {
+    font-size: 1.25em;
+    color: white;
+    background-color: #666;
+    border: 0;
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #banner {
+        flex-direction: column;
+    }
+
+    #banner img {
+        width: 100%;
+    }
 }
 
 /* info */
