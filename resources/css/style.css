@@ -272,19 +272,33 @@ header nav {
 
 /* thesis */
 
-.flex-container-2 {
-    display: flex;
+#thesis h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-#thesis h2 {
-    text-align: center;
-    margin: 2em;
+#thesis-content {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding: 1.5em 2em;
 }
 
 #thesis-main {
     width: 60%;
-    padding: 0 1.5em;
-    margin-bottom: 2em;
+    flex-grow: 0;
+    overflow: hidden;
+    margin-right: 1.5em;
+}
+
+#thesis-main video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#thesis-main h3 {
+    font-size: 1.5em;
 }
 
 #thesis-list {
@@ -305,6 +319,13 @@ header nav {
     margin: 0 1em;
 }
 
+@media only screen and (max-width: 768px) {
+    #thesis-main {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
 
 /* footer */
 
@@ -314,7 +335,10 @@ footer {
 }
 
 footer ul {
+    flex-grow: 1;
+    text-align: right;
     display: inline;
+    margin: 0;
 }
 
 footer li {
