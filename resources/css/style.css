@@ -136,7 +136,6 @@ header nav {
 
 .info-article {
     width: 60%;
-    flex-shrink: 0;
     flex-grow: 1;
     overflow: hidden;
     margin-right: 1.5em;
@@ -153,6 +152,7 @@ header nav {
 }
 
 .side-list {
+    flex-shrink: 4;
     margin-top: -1em;
     padding: 0 0.5em;
     border-left: 1px solid gray;
@@ -160,8 +160,8 @@ header nav {
 
 .list-item {
     display: flex;
-    align-items: top;
-    min-width: 360px;
+    align-items: flex-start;
+    min-width: 300px;
     padding: 1em;
 }
 
@@ -223,13 +223,17 @@ header nav {
 /* learning */
 
 #learning {
-    background-color: lightgray;
-    padding: 2em 4.5em;
+    padding: 1.5em 2em;
 }
 
 #learning h2 {
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 1em;
+}
+
+#career-path-container {
+    align-items: flex-start;
 }
 
 .career-path {
@@ -237,7 +241,7 @@ header nav {
     width: 360px;
     margin: 1em;
     overflow: hidden;
-    padding-bottom: 16px;
+    padding-bottom: 1em;
 }
 
 .career-path img {
@@ -247,11 +251,23 @@ header nav {
 }
 
 .career-path h3 {
-    margin: 1em 1em 0.5em 1em;
+    font-size: 1.5em;
+    margin: 1rem;
 }
 
 .career-path p {
     margin: 0.5em 1em;
+}
+
+@media only screen and (max-width: 480px) {
+    .career-path {
+        padding-bottom: 0;
+        background-color: lightgrey;
+    }
+
+    .career-path p, .career-path img {
+        display: none;
+    }
 }
 
 /* thesis */
